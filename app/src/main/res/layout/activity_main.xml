@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer">
+     //////////////////////////////////////////////////////////
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/cabecera_toolbar">
+    </include>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/contenedor_main">
+    </include>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navegador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/drawer_header"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"/>
+    /////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:text="EMDICEL"
+        android:textSize="50dp"
+        android:fontFamily="arial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+        <Button
+            android:id="@+id/iralogin"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="-70dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/ic_group" />
+        <ViewFlipper
+            android:id="@+id/v_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true" />
+        <ListView
+            android:id="@+id/productoList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
